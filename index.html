@@ -7,33 +7,39 @@
 	</head>
 	<body>
 		<header>
-			<h1>CyberSens</h1>
 			<div class="nav">
-				<li><a href="#">Accueil</a></li>
-				<li><a href="#">Nos services</a></li>
-				<li><a href="#">A propos</a></li>
-				<li><a href="#">Contact</a></li>
+				<ul>
+					<li><h1><a href="#">CyberSens</a></h1></li>
+					<li class="main_menu"><a href="#">Nos services </a>
+						<ul class="details_menu">
+							<li><a href="#">Service de base</a></li>
+							<li><a href="#">Service advanced</a></li>
+						</ul></li>
+					<li><a href="#">A propos</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
 			</div>
 		</header>
 		<main>
 			<section class="banner_home">
-				<h1>CyberSens, slogan/phrase accrocheuse</h1>
-				<p>
-					Resume des services proposes par l'entreprise, on vise <strong>plus de 250 mots</strong> pour avoir de la visibilite dans les moteurs de recherche (SEO)
-				</p>
-			</section>
+				<div class="blank"></div><div class="blank"></div><div class="blank"></div>
+				<div class="banner_content">
+					<div class="banner_text"><h1>CyberSens, <br>slogan/phrase accrocheuse</h1></div>
+				</div><div class="blank"></div>
+			</section><br>
+			<p>Resume des services proposes par l'entreprise, on vise <strong>plus de 250 mots</strong> pour avoir de la visibilite dans les moteurs de recherche (SEO)</p><br>
 			<section class="core">
-				<div class="container">
-					<img src="./img/service1.jpg">
-					<h3><a href="#">Service de base</a></h3>
+				<a href="#"><div class="container_img">
+					<img src="./img/service1.jpg"></div>
+					<h3>Service de base <div class="fleche">►</div></h3>
 					<p>-----Petite description du service-----</p>
-				</div>
-				<div class="container">
-					<img src="./img/service2.jpg">
-					<h3><a href="#">Service advanced</a></h3>
+				</a>
+				<a href="#"><div class="container_img">
+					<img src="./img/service2.jpg"></div>
+					<h3>Service advanced <div class="fleche">►</div></h3>
 					<p>-----Petite description du service-----</p>
-				</div>
-			</section>
+				</a>
+			</section><br>
 		</main>
 		<footer>Footer</footer>
 	</body>
