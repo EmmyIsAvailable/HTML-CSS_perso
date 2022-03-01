@@ -1,0 +1,296 @@
+*{
+	box-sizing: border-box;
+	padding:0;
+	margin:0;
+}
+:root{
+	--height-menu:60px;
+}
+html{
+	scroll-behavior:smooth;
+}
+
+body{
+	background-color:#fff;
+	min-height:100vh;
+	font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer{
+	background-color:#000;
+	color:#ffffff;
+	text-align:center;
+	padding: 10px;
+}
+
+h3{
+	text-align:center;
+	padding:5px;
+}
+p{
+	text-justify:inter-word;
+	padding:20px;
+}
+
+a{
+	text-decoration:none;
+}
+
+.nav{
+	position:sticky;
+	width:100%;
+}
+.nav > ul{
+	display:flex;
+	text-align:center;
+	height:var(--height-menu);
+	box-shadow:0px 1px 2px 1px rgba(0,0,0,0.3);
+}
+
+.nav ul{
+	list-style-type:none;
+}
+
+.nav>ul>li{
+	position:relative;
+	flex:1;
+	height:100%;
+	background-color:black;
+	text-transform:uppercase;
+}
+
+.nav>ul>li>a{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+}
+
+.main_menu>a:after{
+	content:'►';
+	display:inline-block;
+}
+
+.details_menu{
+	background-color:black;
+	margin-top:var(--height-menu);
+	width:100%;
+	align-items:center;
+	text-align:left;
+	overflow:hidden;
+	max-height:0;
+	position:absolute;
+}
+
+.details_menu ul{
+	position:absolute;
+}
+
+.details_menu>li>a{
+	align-items:center;
+	display:flex;
+	height:50px;
+	width:100%;
+	padding-left:20px;
+}
+
+@keyframes rotationfleche{
+	0%{
+		transform:rotate(0deg);
+	}
+	100%{
+		transform:rotate(90deg);
+	}
+}
+
+@keyframes apparitiondetails{
+	0%{
+		box-shadow:0px 3px 3px 1px rgba(0,0,0,0);
+	}
+	100%{
+		max-height:50em;
+		box-shadow:0px 3px 3px 1px rgba(0,0,0,0.3);
+	}
+}
+
+.main_menu:hover>a:after{
+	animation:rotationfleche 0.2s linear forwards;
+}
+
+.main_menu:hover > .details_menu{
+	animation:apparitiondetails 1s forwards;
+}
+
+header a{
+	color:#ffffff;
+}
+.nav li a:hover{
+	color:#ff8c19;
+}
+
+.nav input{
+	width:40px;
+	height:40px;
+	cursor:pointer;
+}
+
+.section{
+	color:black;
+
+}
+
+.static{
+	padding-top:20px;
+	background:white;
+	height:200px;
+	margin-left:50px;
+	margin-right:50px;
+	text-align:center;
+	display:flex;
+	justify-items:center;
+	flex-direction:row;
+}
+
+.img1{
+	background-image:url('./img/img1.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height:100%;
+}
+
+.core{
+	padding-left:50px;
+	padding-right:50px;
+}
+.container_img{
+	display:flex;
+	align-items:left;
+	flex-direction:row;
+	justify-content:space-between;
+	background-color:#dcdcdc;
+	background-color:green;
+	width:370px;
+	height:370px;
+	overflow:hidden;
+}
+
+.container_img img{
+	width:370px;
+	height:370px;
+	transition:transform .5s ease;
+}
+.core a{
+	text-align:center;
+	color:black;
+}
+
+.core a:hover .fleche{
+	color:#ff8c19;
+}
+.fleche{
+	display:inline-block;
+}
+.core a:hover img{
+	transform:scale(1.1);
+}
+
+h3 a{
+	color:#000;
+}
+
+.core{
+	display:flex;
+	flex-direction:line;
+	justify-content:space-around;
+}
+
+.banner_home{
+	color:#ffffff;
+	background-image:url('./img/banner.jpg');
+	background-repeat:no-repeat; 
+	background-size:cover;
+}
+.banner_content{
+	position:relative;
+	background:black;
+	width:450px;
+	height:100px;
+	transform:skew(20deg);
+	overflow:hidden;
+	animation-name:reveal;
+	animation-iteration-count:1;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-fill-mode:forwards;
+}
+
+.banner_text h1{
+	padding:30px;
+	text-align:left;
+	transform:skew(-20deg);
+}
+
+.blank{
+	padding:20px;
+}
+
+.cssform{
+	background-color:#f2f2f2;
+	padding-left:100px;
+}
+
+.cssform textarea{
+	height:200px;
+	resize:none;
+}
+
+input[id=first_name], input[id=last_name]{
+	border-radius:6px;
+	width:200px;
+}
+
+.ligne{
+	display:inline-block;
+}
+
+input[id=email], textarea{
+	border-radius:6px;
+	width:555px;
+}
+
+input[type=submit], button{
+
+	background-color:black;
+	color:white;
+	border-radius:6px;
+	cursor:pointer;
+	padding:12px 20px;
+	font-size:15px;
+}
+
+button{
+	display:grid;
+	margin:auto;
+}
+
+input[type=submit], button:hover{
+	background-color:#ff8c19;
+}
+
+.banner_form{
+	background-image:url('./img/contactbanner.jpg');
+	background-repeat:no-repeat; 
+	background-size:cover;
+	color:white;
+}
+
+@keyframes reveal{
+	0%{
+		left:-100px;
+	}
+	100%{
+		left:0px;
+	}
+}
