@@ -32,14 +32,21 @@ body{
 	font-size: 18px; 
 	line-height: 25px;
 	border-radius: 4px;
+	transition: 0.3s;
+}
+#logo>img {
+	height: 20px;
 }
 #navbar #logo {
-	font-size: 35px;
-	font-weight: bold;
+	line-height:25px;
+	padding:12px;
+	text-align:center;
+	font-size: 25px;
+	border-radius:4px;
 	transition: 0.4s;
 }
-#navbar a:hover {
-	color: var(--font-hover);
+#navbar-right a:hover {
+	font-weight:bold;
 }
 #navbar-right {
 	float: right;
@@ -67,6 +74,7 @@ body{
 	background-repeat:no-repeat;
 	background-attachment:fixed;
 	background-size:cover;
+	background-position:center;
 	height:100vh;
 	text-align:center;
 }
@@ -77,21 +85,14 @@ body{
 	border-right: solid 3px white;
 	white-space: nonavbar;
 	overflow: hidden;
-	font-size: 32px;
+	font-size: 28px;
 	color: white;
 	margin: 0 auto;
-	animation: animated-text 4s steps(22,end) 1s 1 normal both,
-             animated-cursor 600ms steps(22,end) infinite;
+	animation: animated-text 4s steps(29,end) 1s 1 normal both;
 }
 @keyframes animated-text{
 	from{
 		width: 0;}
 	to{
 		width: 472px;}
-}
-@keyframes animated-cursor{
-  from{
-	  border-right-color: white;}
-  to{
-	  border-right-color: transparent;}
 }
